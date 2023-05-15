@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 
 
 
-db_connection_string = DB_CONNECTION_STRING	= "mysql+pymysql://e97mikgvwjxzlv0mq21n:pscale_pw_em9sYpmTHt8XG3UpIFS4E3536n90Ih1nLuUMyHFv95h@aws.connect.psdb.cloud/goodness?charset=utf8mb4"
+db_connection_string = DB_CONNECTION_STRING	= "mysql+pymysql://l9sjcjt4t06p7xiisvv7:pscale_pw_asjb6A5PF3aZ2mclNnBmQNEK8RbIXycjTtaIzotkZ0C@aws.connect.psdb.cloud/goodness?charset=utf8mb4"
 engine = create_engine(db_connection_string,
                        connect_args={
                            "ssl":{
@@ -28,7 +28,7 @@ def login():
         results = result.all()
         if len(results) == 1:
             print('Name found in database')
-            return render_template("home.html")
+            return redirect("https://damdave.github.io/gdave")
         else:
             return redirect("/")
 
