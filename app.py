@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request, redirect
 from sqlalchemy import create_engine, text
+import os
 
-
-
-db_connection_string = DB_CONNECTION_STRING	= "mysql+pymysql://l9sjcjt4t06p7xiisvv7:pscale_pw_asjb6A5PF3aZ2mclNnBmQNEK8RbIXycjTtaIzotkZ0C@aws.connect.psdb.cloud/goodness?charset=utf8mb4"
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 engine = create_engine(db_connection_string,
                        connect_args={
                            "ssl":{
